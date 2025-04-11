@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <h1>PlanneryAI 📱</h1>
+  <p>Your AI-powered daily planner and task management companion</p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+![Development Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+[![Made with Expo](https://img.shields.io/badge/Made%20with-Expo-blue.svg)](https://expo.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9.4-blue.svg)](https://www.typescriptlang.org/)
 
-## Get started
+</div>
 
-1. Install dependencies
+<p align="center">
+  <img src="assets/ss.png" alt="PlanneryAI Preview" width="300">
+</p>
 
-   ```bash
-   npm install
-   ```
+## 🚧 Development Status
 
-2. Start the app
+**Note: PlanneryAI is currently under active development.** Features and functionality are being added and refined. The app is not yet ready for production use.
 
-   ```bash
-    npx expo start
-   ```
+## 🌟 Features (Planned)
 
-In the output, you'll find options to open the app in a
+- 🤖 AI-powered task suggestions and scheduling
+- 📅 Smart calendar integration
+- ✅ Intuitive task management
+- 🎯 Goal tracking and progress monitoring
+- 🌙 Dark/Light mode support
+- 📱 Cross-platform (iOS & Android)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- [Expo](https://expo.dev/) - React Native development framework
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [NativeWind](https://www.nativewind.dev/) - Tailwind CSS for React Native
+- [Expo Router](https://docs.expo.dev/router/introduction/) - File-based routing
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/) - Animations
 
-## Get a fresh project
+## 🚀 Getting Started
 
-When you're ready, run:
+1. **Install dependencies**
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. **Start the development server**
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. **Run on your device**
+   - Scan the QR code with Expo Go ([iOS](https://apps.apple.com/app/apple-store/id982107779) | [Android](https://play.google.com/store/apps/details?id=host.exp.exponent))
+   - Or press 'i' for iOS simulator
+   - Or press 'a' for Android emulator
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📱 Development Builds
 
-## Join the community
+To create a development build:
 
-Join our community of developers creating universal apps.
+```bash
+npx expo prebuild
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🤝 Contributing
+
+As this project is still in development, we're not accepting contributions at this time. Stay tuned for updates!
+
+## 📝 License
+
+This project is private and under development. All rights reserved.
+
+## 📞 Contact
+
+For inquiries about PlanneryAI, please reach out to [Your Contact Information].
