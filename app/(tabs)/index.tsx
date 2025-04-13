@@ -39,14 +39,58 @@ export default function HomeScreen() {
               15 minutes of mindfulness to start the day
             </Text>
           </View>
-
-          <View className="mb-[24px]">
-            <View className="flex-row items-center gap-[8px] mb-[8px]">
-              <View className="w-[4px] h-[4px] rounded-full bg-[#007AFF]" />
-              <Text className="font-medium text-[16px]">Workout Session</Text>
-            </View>
-            <Text className="text-[14px] text-[#666666]">
-              30 minutes cardio + strength training
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
+            </Text>
+          </View>
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
+            </Text>
+          </View>
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
+            </Text>
+          </View>
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
+            </Text>
+          </View>
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
+            </Text>
+          </View>
+          <View className="mb-[24px] p-[16px] rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.05)] bg-[#FFFFFF]">
+            <Text className="text-[14px] text-[#007AFF] mb-[4px]">7:00 AM</Text>
+            <Text className="text-[16px] text-[#000000] mb-[4px]">
+              Morning Meditation
+            </Text>
+            <Text className="text-[14px] text-[#666666] mb-[4px]">
+              15 minutes of mindfulness to start the day
             </Text>
           </View>
         </View>

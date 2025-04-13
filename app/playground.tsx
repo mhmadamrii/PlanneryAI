@@ -1,51 +1,62 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
-import { format } from 'date-fns';
-import { Brain, Plus } from 'lucide-react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import { CircleCheck as CheckCircle2, Circle } from 'lucide-react-native';
 
-export default function TodayScreen() {
-  const today = new Date();
-
+export default function TasksScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <View>
-          <Text style={styles.date}>{format(today, 'EEEE, MMMM d')}</Text>
-          <Text style={styles.title}>Today's Plan</Text>
-        </View>
-        <TouchableOpacity style={styles.aiButton}>
-          <Brain size={24} color="#007AFF" />
-        </TouchableOpacity>
+        <Text style={styles.title}>Tasks</Text>
+        <Text style={styles.subtitle}>Manage your daily tasks</Text>
       </View>
 
       <ScrollView style={styles.content}>
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Morning Routine</Text>
-          <View style={styles.card}>
-            <Text style={styles.taskTime}>7:00 AM</Text>
-            <Text style={styles.taskTitle}>Morning Meditation</Text>
-            <Text style={styles.taskDescription}>15 minutes of mindfulness to start the day</Text>
+          <Text style={styles.sectionTitle}>Today</Text>
+          <View style={styles.taskItem}>
+            <TouchableOpacity>
+              <Circle size={24} color="#007AFF" />
+            </TouchableOpacity>
+            <View style={styles.taskContent}>
+              <Text style={styles.taskTitle}>Review project proposal</Text>
+              <Text style={styles.taskTime}>Due 2:00 PM</Text>
+            </View>
           </View>
-          <View style={styles.card}>
-            <Text style={styles.taskTime}>8:00 AM</Text>
-            <Text style={styles.taskTitle}>Workout Session</Text>
-            <Text style={styles.taskDescription}>30 minutes cardio + strength training</Text>
+          <View style={styles.taskItem}>
+            <TouchableOpacity>
+              <CheckCircle2 size={24} color="#34C759" />
+            </TouchableOpacity>
+            <View style={styles.taskContent}>
+              <Text style={[styles.taskTitle, styles.completedTask]}>
+                Morning workout
+              </Text>
+              <Text style={styles.taskTime}>Completed</Text>
+            </View>
           </View>
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Work Focus</Text>
-          <View style={styles.card}>
-            <Text style={styles.taskTime}>9:30 AM</Text>
-            <Text style={styles.taskTitle}>Project Review</Text>
-            <Text style={styles.taskDescription}>Weekly progress meeting with the team</Text>
+          <Text style={styles.sectionTitle}>Tomorrow</Text>
+          <View style={styles.taskItem}>
+            <TouchableOpacity>
+              <Circle size={24} color="#007AFF" />
+            </TouchableOpacity>
+            <View style={styles.taskContent}>
+              <Text style={styles.taskTitle}>Team meeting</Text>
+              <Text style={styles.taskTime}>10:00 AM</Text>
+            </View>
           </View>
         </View>
-
-        <TouchableOpacity style={styles.addButton}>
-          <Plus size={24} color="#FFFFFF" />
-          <Text style={styles.addButtonText}>Add New Task</Text>
-        </TouchableOpacity>
       </ScrollView>
+
+      <TouchableOpacity style={styles.addButton}>
+        <Text style={styles.addButtonText}>New Task</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -59,30 +70,17 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 60,
     backgroundColor: '#FFFFFF',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#F1F1F1',
-  },
-  date: {
-    fontFamily: 'Inter_400Regular',
-    fontSize: 16,
-    color: '#666666',
   },
   title: {
     fontFamily: 'Inter_700Bold',
     fontSize: 28,
     color: '#000000',
-    marginTop: 4,
   },
-  aiButton: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    backgroundColor: '#F0F8FF',
-    justifyContent: 'center',
-    alignItems: 'center',
+  subtitle: {
+    fontFamily: 'Inter_400Regular',
+    fontSize: 16,
+    color: '#666666',
+    marginTop: 4,
   },
   content: {
     flex: 1,
@@ -97,7 +95,9 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 12,
   },
-  card: {
+  taskItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 12,
     padding: 16,
@@ -108,36 +108,35 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 2,
   },
-  taskTime: {
-    fontFamily: 'Inter_500Medium',
-    fontSize: 14,
-    color: '#007AFF',
-    marginBottom: 4,
+  taskContent: {
+    marginLeft: 12,
+    flex: 1,
   },
   taskTitle: {
-    fontFamily: 'Inter_600SemiBold',
+    fontFamily: 'Inter_500Medium',
     fontSize: 16,
     color: '#000000',
     marginBottom: 4,
   },
-  taskDescription: {
+  completedTask: {
+    textDecorationLine: 'line-through',
+    color: '#8E8E93',
+  },
+  taskTime: {
     fontFamily: 'Inter_400Regular',
     fontSize: 14,
     color: '#666666',
   },
   addButton: {
+    margin: 20,
     backgroundColor: '#007AFF',
     borderRadius: 12,
     padding: 16,
-    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 12,
   },
   addButtonText: {
     fontFamily: 'Inter_600SemiBold',
     fontSize: 16,
     color: '#FFFFFF',
-    marginLeft: 8,
   },
 });
