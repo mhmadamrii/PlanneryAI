@@ -1,6 +1,8 @@
 import { View, Text } from 'react-native';
 import { Brain, Plus } from 'lucide-react-native';
 import { format } from 'date-fns';
+import { StatusBar } from 'expo-status-bar';
+import { useRouter } from 'expo-router';
 
 import {
   Image,
@@ -12,9 +14,11 @@ import {
 
 export default function HomeScreen() {
   const today = new Date();
+  const router = useRouter();
 
   return (
     <View className="bg-[#F8F9FA] flex-1">
+      <StatusBar style="dark" />
       <View className="p-[20px] pt-[60px] bg-[#FFFFFF] flex-row justify-between items-center border-b border-[#F1F1F1]">
         <View>
           <Text>{format(today, 'EEEE, MMMM d')}</Text>
@@ -26,7 +30,7 @@ export default function HomeScreen() {
       </View>
 
       <ScrollView className="flex-1 p-[20px]">
-        <View className="mb-[24px]">
+        <View className="mb-[10px]">
           <Text className="font-semibold text-[18px] mb-[12px]">
             Morning Routine
           </Text>
@@ -95,7 +99,10 @@ export default function HomeScreen() {
           </View>
         </View>
 
-        <TouchableOpacity className="w-full h-[44px] rounded-[12px] bg-[#007AFF] flex-row items-center justify-center text-[#FFFFFF]">
+        <TouchableOpacity
+          onPress={() => router.navigate('/create-task')}
+          className="w-full h-[44px] rounded-[12px] bg-[#007AFF] flex-row items-center justify-center text-[#FFFFFF] mb-[100px]"
+        >
           <Plus size={24} color="#FFFFFF" />
           <Text className="font-semibold text-[16px] text-[#FFFFFF] mt-[4px]">
             Add New Task
@@ -105,22 +112,3 @@ export default function HomeScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
