@@ -3,14 +3,7 @@ import { Brain, Plus } from 'lucide-react-native';
 import { format } from 'date-fns';
 import { StatusBar } from 'expo-status-bar';
 import { useRouter } from 'expo-router';
-
-import {
-  Image,
-  StyleSheet,
-  Platform,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
+import { TouchableOpacity, ScrollView } from 'react-native';
 
 export default function HomeScreen() {
   const today = new Date();
@@ -98,16 +91,6 @@ export default function HomeScreen() {
             </Text>
           </View>
         </View>
-
-        <TouchableOpacity
-          onPress={() => router.navigate('/create-task')}
-          className="w-full h-[44px] rounded-[12px] bg-[#007AFF] flex-row items-center justify-center text-[#FFFFFF] mb-[100px]"
-        >
-          <Plus size={24} color="#FFFFFF" />
-          <Text className="font-semibold text-[16px] text-[#FFFFFF] mt-[4px]">
-            Add New Task
-          </Text>
-        </TouchableOpacity>
       </ScrollView>
     </View>
   );
