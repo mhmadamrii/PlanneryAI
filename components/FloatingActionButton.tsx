@@ -8,13 +8,14 @@ export function FloatingActionButton() {
   const onStateChange = ({ open }: { open: boolean }) => setState({ open });
 
   const { open } = state;
-
+  // Turkiyeburslari123
   return (
     <Portal>
       <FAB.Group
         open={open}
         visible
         icon={open ? 'calendar-today' : 'plus'}
+        color="#FFFFFF"
         actions={[
           { icon: 'plus', onPress: () => console.log('Pressed add') },
           {

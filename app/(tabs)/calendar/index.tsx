@@ -1,9 +1,14 @@
 import { useState } from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Button, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import { format } from 'date-fns';
 import { Clock, MapPin } from 'lucide-react-native';
 
+async function fetchHello() {
+  const response = await fetch('/api;hello');
+  const data = await response.json();
+  console.log('data', data);
+}
 export default function CalendarScreen() {
   const [selected, setSelected] = useState(format(new Date(), 'yyyy-MM-dd'));
 
@@ -65,6 +70,12 @@ export default function CalendarScreen() {
       <View className="p-[20px] pt-[60px] bg-[#FFFFFF] border-b border-[#F1F1F1]">
         <Text className="text-[28px] text-[#000000] font-bold">Calendar</Text>
       </View>
+      <TouchableOpacity
+        className="mb-[20px] border rounded-sm bg-blue-500 p-2"
+        onPress={() => fetchHello()}
+      >
+        <Text>Press me</Text>
+      </TouchableOpacity>
 
       <Calendar
         style={{
